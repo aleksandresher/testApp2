@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "text": "There are many variations of passages",
+    "date": "22 April 2023",
+    "image": "../../assets/girl-with-hat.png",
+    "active": false,
+    "index": 1
+  },
+  {
+    "id": 1,
+    "text": "The point of using Lorem Ipsum",
+    "date": "20 April 2023",
+    "image": "../../assets/beach.png",
+    "active": false,
+    "index": 2
+  },
+  {
+    "id": 2,
+    "text": "I must explain to you how all this mistaken idea",
+    "date": "19 April 2023",
+    "image": "../../assets/home.png",
+    "active": false,
+    "index": 3
+  },
+  {
+    "id": 3,
+    "text": "On the other hand, we denounce with righteous indignation",
+    "date": "15 April 2023",
+    "image": "../../assets/mountain.png",
+    "active": false,
+    "index": 4
+  }
+]
