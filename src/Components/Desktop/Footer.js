@@ -361,7 +361,7 @@ const SendButton = styled.button`
 
   @media (max-width: 1260px) {
     left: 280px;
-    top: 120px;
+    top: 130px;
     width: 60px;
     height: 30px;
   }
