@@ -1,17 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
-import data from "../slideData.json";
+import data from "../../slideData.json";
 
 export function Slide() {
   const [items, setItems] = useState(data);
   const [go, setGo] = useState(0);
-  console.log(go);
   const [rightArrowactive, setRightArrowActive] = useState(false);
   const [leftArrowactive, setLeftArrowActive] = useState(true);
   const [LeftarrowFill, setLeftArrowFill] = useState("");
   const [RightarrowFill, setRightArrowFill] = useState("");
-  const [gradientNum, setGradientNum] = useState(0);
 
   useEffect(() => {
     if (go === -321) {
@@ -22,7 +20,7 @@ export function Slide() {
     } else if (go === 0) {
       setRightArrowActive(false);
       setLeftArrowActive(true);
-      setLeftArrowFill("#2B3235");
+      setLeftArrowFill("#f1f1f1");
       setRightArrowFill("#2B3235");
     } else if (go < 0) {
       setRightArrowActive(true);
@@ -105,6 +103,9 @@ const Container = styled.div`
     width: 700px;
     padding-left: 20px;
   }
+  @media (max-width: 440px) {
+    width: 360px;
+  }
 `;
 
 const NewsHeader = styled.h1`
@@ -151,6 +152,9 @@ const TestSlideContainer = styled.div`
   @media (max-width: 830px) {
     width: 580px;
   }
+  @media (max-width: 440px) {
+    width: 360px;
+  }
 `;
 
 const TestImages = styled.img`
@@ -161,11 +165,11 @@ const TestImages = styled.img`
 
 const LeftArrow = styled.svg`
   cursor: pointer;
-  fill: ${(props) => (props.color ? "#F2d3d3" : "#2B3252")};
+  fill: ${(props) => (props.color ? props.color : "")};
 `;
 const RightArrow = styled.svg`
   cursor: pointer;
-  fill: ${(props) => (props.color ? "#2B3235" : "#F2d3de")};
+  fill: ${(props) => (props.color ? props.color : "")};
 `;
 const NewsContainer = styled.div`
   display: flex;
@@ -216,7 +220,8 @@ const GradientDiv = styled.div`
 `;
 const GradientDiv2 = styled.div`
   position: absolute;
-  width: 310px;
+  width: 300px;
+  left: 10px;
   height: 410px;
   background-color: ${(props) => (props.num === 0 ? "#Ef5555" : " #fff")};
   z-index: -200;

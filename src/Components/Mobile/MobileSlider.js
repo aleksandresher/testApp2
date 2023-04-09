@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import data from "../slideData.json";
+import data from "../../slideData.json";
 import "@splidejs/react-splide/css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
@@ -41,6 +41,7 @@ const SlideTextWrapper = styled.div`
   position: absolute;
   bottom: 30px;
   background: inherit;
+  gap: 20px;
 `;
 
 const SlideText = styled.h1`

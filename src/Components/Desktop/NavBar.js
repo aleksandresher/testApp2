@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import Logo from "../logo.png";
-import SIcon from "../searchIcon.png";
 import { NavLink } from "react-router-dom";
 
 export function NavBar() {
   return (
     <NavContainer>
       <LogoAndNameBox>
-        <CompanyLogo src={Logo} />
+        <CompanyLogo
+          src={process.env.PUBLIC_URL + "../../../assets/logo.png"}
+        />
         <CompanyName>
           Company <br></br>name
         </CompanyName>
@@ -23,7 +23,9 @@ export function NavBar() {
 
       <SearchBox>
         <SearchInput type="text" placeholder="Search KeyWord ..." />
-        <SearchIcon src={SIcon} />
+        <SearchIcon
+          src={process.env.PUBLIC_URL + "../../../assets/searchIcon.png"}
+        />
       </SearchBox>
     </NavContainer>
   );
@@ -51,6 +53,9 @@ const NavContainer = styled.div`
     width: 500px;
     height: 50px;
   }
+  @media (max-width: 440px) {
+    width: 300px;
+  }
 `;
 
 const CompanyLogo = styled.img`
@@ -70,6 +75,10 @@ const CompanyLogo = styled.img`
     height: 30px;
   }
   @media (max-width: 830px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 440px) {
     width: 20px;
     height: 20px;
   }
@@ -94,6 +103,9 @@ const CompanyName = styled.p`
   @media (max-width: 830px) {
     font-size: 12px;
   }
+  @media (max-width: 440px) {
+    font-size: 12px;
+  }
 `;
 
 const NavBox = styled.div`
@@ -116,6 +128,9 @@ const NavBox = styled.div`
   @media (max-width: 830px) {
     width: 300px;
     gap: 15px;
+  }
+  @media (max-width: 440px) {
+    width: 400px;
   }
 `;
 
@@ -184,6 +199,10 @@ const SearchBox = styled.div`
     width: 120px;
     height: 25px;
     padding-bottom: 10px;
+  }
+  @media (max-width: 440px) {
+    width: 100px;
+    display: none;
   }
 `;
 

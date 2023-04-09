@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Arrow from "../Vector.png";
 
 export function MainSingleSlide() {
   return (
@@ -22,7 +21,9 @@ export function MainSingleSlide() {
         </ImageSubText>
         <ImageButton>
           <ButtonText>See More</ButtonText>
-          <LeftArrow src={Arrow} />
+          <LeftArrow
+            src={process.env.PUBLIC_URL + "../../../assets/Vector.png"}
+          />
         </ImageButton>
       </TextWrapper>
     </WrapperContainer>
@@ -33,6 +34,8 @@ const WrapperContainer = styled.div`
   margin-top: 50px;
   z-index: -5;
   position: relative;
+  display: flex;
+  padding: 0 auto;
 
   @media (max-width: 400px) {
     margin-top: 30px;
@@ -63,6 +66,10 @@ const BackgroudDiv = styled.div`
   @media (max-width: 600px) {
     width: 480px;
   }
+  @media (max-width: 440px) {
+    width: 340px;
+    height: 380px;
+  }
   @media (max-width: 400px) {
     width: 340px;
     height: 365px;
@@ -85,6 +92,12 @@ const TextWrapper = styled.div`
   @media (max-width: 830px) {
     width: 400px;
   }
+  @media (max-width: 440px) {
+    width: 300px;
+    margin-left: 20px;
+    gap: 10px;
+  }
+
   @media (max-width: 400px) {
     width: 360px;
     margin-left: 10px;
@@ -106,6 +119,9 @@ const ImageHeader = styled.h1`
   @media (max-width: 830px) {
     font-size: 26px;
   }
+  @media (max-width: 440px) {
+    font-size: 22px;
+  }
   @media (max-width: 400px) {
     font-size: 22px;
   }
@@ -126,6 +142,9 @@ const ImageSubText = styled.p`
 
   @media (max-width: 830px) {
     font-size: 14px;
+  }
+  @media (max-width: 440px) {
+    font-size: 12px;
   }
   @media (max-width: 400px) {
     font-size: 12px;
@@ -185,6 +204,10 @@ const Image = styled.img`
   @media (max-width: 600px) {
     width: 500px;
   }
+  @media (max-width: 440px) {
+    width: 370px;
+    height: 370px;
+  }
   @media (max-width: 400px) {
     width: 360px;
     height: 360px;
@@ -217,6 +240,10 @@ const GradientDiv = styled.div`
   @media (max-width: 600px) {
     width: 500px;
     height: 500px;
+  }
+  @media (max-width: 440px) {
+    width: 370px;
+    height: 370px;
   }
   @media (max-width: 400px) {
     width: 360px;

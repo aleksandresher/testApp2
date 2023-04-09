@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import Logo1 from "../logoWhite.png";
-import InstagramIcon from "../insta.png";
-import FacebookIcon from "../facebook.png";
 import { NavLink } from "react-router-dom";
 
 export function Footer() {
@@ -11,7 +8,9 @@ export function Footer() {
         <TestContainer>
           <FirstDiv>
             <LogoAndName>
-              <Logo src={Logo1} />
+              <Logo
+                src={process.env.PUBLIC_URL + "../../../assets/logoWhite.png"}
+              />
               <CompanyName>
                 Company <br></br>Name
               </CompanyName>
@@ -28,10 +27,14 @@ export function Footer() {
             </FooterNavs>
             <SocIconWrapper>
               <SocIconContainer>
-                <img src={InstagramIcon} />
+                <img
+                  src={process.env.PUBLIC_URL + "../../../assets/insta.png"}
+                />
               </SocIconContainer>
               <SocIconContainer>
-                <img src={FacebookIcon} />
+                <img
+                  src={process.env.PUBLIC_URL + "../../../assets/facebook.png"}
+                />
               </SocIconContainer>
             </SocIconWrapper>
           </NavAndSocial>
@@ -51,10 +54,36 @@ export function Footer() {
   );
 }
 
-const SocIconWrapper = styled.div`
+const FooterWraaper = styled.div`
   display: flex;
-  gap: 10px;
+  width: 100%;
+
+  background-color: #2b3252;
+  justify-content: center;
+  padding: 30px 0px 30px 0px;
 `;
+
+const FooterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 1300px;
+  justify-content: space-between;
+
+  @media (max-width: 1440px) {
+    width: 1200px;
+  }
+  @media (max-width: 1260px) {
+    width: 880px;
+    gap: 20px;
+  }
+  @media (max-width: 1000px) {
+    width: 660px;
+  }
+  @media (max-width: 830px) {
+    flex-direction: column;
+  }
+`;
+
 const TestContainer = styled.div`
   display: flex;
   gap: 50px;
@@ -65,12 +94,35 @@ const TestContainer = styled.div`
   @media (max-width: 830px) {
     gap: 60px;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     flex-direction: column;
   }
+
   @media (max-width: 400px) {
+    flex-direction: column;
     gap: 30px;
     margin-bottom: 20px;
+  }
+`;
+
+const FirstDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 207px;
+  gap: 20px;
+
+  @media (max-width: 1000px) {
+    width: 170px;
+  }
+`;
+
+const NavAndSocial = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+  @media (max-width: 400px) {
+    gap: 10px;
   }
 `;
 
@@ -94,14 +146,9 @@ const SocIconContainer = styled.div`
   border: 2px solid #fff;
   border-radius: 8px;
 `;
-
-const FooterWraaper = styled.div`
+const SocIconWrapper = styled.div`
   display: flex;
-  width: 100%;
-
-  background-color: #2b3252;
-  justify-content: center;
-  padding: 30px 0px 30px 0px;
+  gap: 10px;
 `;
 
 const CompanyName = styled.p`
@@ -117,27 +164,6 @@ const CompanyName = styled.p`
   }
   @media (max-width: 1260px) {
     font-size: 16px;
-  }
-`;
-
-const NavAndSocial = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  gap: 30px;
-  @media (max-width: 400px) {
-    gap: 10px;
-  }
-`;
-
-const FirstDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 207px;
-  gap: 20px;
-
-  @media (max-width: 1000px) {
-    width: 170px;
   }
 `;
 
@@ -157,26 +183,7 @@ const Logo = styled.img`
     height: 40px;
   }
 `;
-const FooterContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 1300px;
-  justify-content: space-between;
 
-  @media (max-width: 1440px) {
-    width: 1200px;
-  }
-  @media (max-width: 1260px) {
-    width: 880px;
-    gap: 20px;
-  }
-  @media (max-width: 1000px) {
-    width: 660px;
-  }
-  @media (max-width: 830px) {
-    flex-direction: column;
-  }
-`;
 const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -192,7 +199,7 @@ const InputContainer = styled.div`
     margin-left: 60px;
   }
   @media (max-width: 400px) {
-    margin-left: 30px;
+    margin-left: 45px;
   }
 `;
 
@@ -238,6 +245,9 @@ const NameInput = styled.input`
   @media (max-width: 830px) {
     width: 150px;
   }
+  @media (max-width: 440px) {
+    width: 110px;
+  }
   @media (max-width: 400px) {
     width: 100px;
   }
@@ -277,6 +287,9 @@ const EmailInput = styled.input`
   }
   @media (max-width: 830px) {
     width: 150px;
+  }
+  @media (max-width: 440px) {
+    width: 110px;
   }
   @media (max-width: 400px) {
     width: 100px;
@@ -321,6 +334,9 @@ const TextInput = styled.textarea`
   @media (max-width: 830px) {
     width: 330px;
   }
+  @media (max-width: 440px) {
+    width: 240px;
+  }
   @media (max-width: 400px) {
     width: 235px;
   }
@@ -359,10 +375,16 @@ const SendButton = styled.button`
   @media (max-width: 830px) {
     left: 280px;
   }
+  @media (max-width: 440px) {
+    left: 170px;
+    top: 80px;
+    font-size: 10px;
+  }
   @media (max-width: 400px) {
     left: 180px;
     height: 20px;
     font-size: 10px;
+    top: 80px;
   }
 `;
 

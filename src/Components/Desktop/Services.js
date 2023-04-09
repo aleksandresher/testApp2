@@ -35,18 +35,15 @@ export function Services() {
   );
 }
 
-const ServiceSubContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 const ServicesWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
 
+  @media (max-width: 440px) {
+    margin-bottom: 20px;
+  }
   @media (max-width: 400px) {
     margin-bottom: 20px;
   }
@@ -72,9 +69,20 @@ const WrapperContainer = styled.div`
   @media (max-width: 600px) {
     width: 500px;
   }
+  @media (max-width: 440px) {
+    flex-direction: column;
+    width: 100%;
+  }
   @media (max-width: 400px) {
     flex-direction: column;
+    width: 100%;
   }
+`;
+
+const ServiceSubContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ImageWrapper = styled.div`

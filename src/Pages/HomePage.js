@@ -1,19 +1,16 @@
-import { Footer } from "../Components/Footer";
-import { NavBar } from "../Components/NavBar";
-import { Slide } from "../Components/Slide";
-import { MainSingleSlide } from "../Components/MainSingleSlide";
-import { Services } from "../Components/Services";
-import { AboutCompany } from "../Components/AboutCompany";
 import styled from "styled-components";
-import CustomArrows from "../Components/Slide";
-import { MobileNavigation } from "../Components/MobileNavigation";
 import { useState, useEffect } from "react";
-import { MobleHeader } from "../Components/MobileHeader";
-import { MobileSlider } from "../Components/MobileSlider";
+import { Footer } from "../Components/Desktop/Footer";
+import { NavBar } from "../Components/Desktop/NavBar";
+import { Slide } from "../Components/Desktop/Slide";
+import { MainSingleSlide } from "../Components/Desktop/MainSingleSlide";
+import { Services } from "../Components/Desktop/Services";
+import { AboutCompany } from "../Components/Desktop/AboutCompany";
+import { MobleHeader } from "../Components/Mobile/MobileHeader";
+import { MobileSlider } from "../Components/Mobile/MobileSlider";
 
 export function HomePage() {
   const [showMobileNavMenu, setShowMobileNavMenu] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
 
   useEffect(() => {
     if (window.innerWidth >= 541) {
@@ -35,12 +32,10 @@ export function HomePage() {
   }, []);
   return (
     <HomePageContainer>
-      {/* {!showMobileNavMenu ? <NavBar /> : <MobileNavigation />} */}
       {showMobileNavMenu ? <MobleHeader /> : <NavBar />}
       <MainSingleSlide />
       <Services />
       {showMobileNavMenu ? <MobileSlider /> : <Slide />}
-      {/* <Slide /> */}
       <AboutCompany />
       <Footer />
     </HomePageContainer>

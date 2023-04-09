@@ -55,13 +55,42 @@ const AboutCompanyWrapper = styled.div`
     height: 400px;
   }
   @media (max-width: 600px) {
-    gap: 20px;
+    width: 280px;
+    height: 300px;
+  }
+  @media (max-width: 440px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    margin-bottom: 380px;
+    margin-top: 50px;
   }
   @media (max-width: 400px) {
     flex-direction: column;
-    width: 400px;
+    width: 100%;
     align-items: center;
     margin-bottom: 380px;
+  }
+`;
+
+const CompanyInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  gap: 20px;
+
+  @media (max-width: 1260px) {
+    width: 500px;
+    gap: 0px;
+  }
+  @media (max-width: 440px) {
+    width: 320px;
+    padding-left: 10px;
+  }
+
+  @media (max-width: 400px) {
+    width: 300px;
   }
 `;
 
@@ -80,21 +109,6 @@ const AboutCompanyHeader = styled.h1`
   }
   @media (max-width: 830px) {
     font-size: 24px;
-  }
-`;
-
-const CompanyInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 700px;
-  gap: 20px;
-
-  @media (max-width: 1260px) {
-    width: 500px;
-    gap: 0px;
-  }
-  @media (max-width: 400px) {
-    width: 300px;
   }
 `;
 
@@ -135,6 +149,9 @@ const CyborgImage = styled.img`
     width: 280px;
     height: 300px;
   }
+  @media (max-width: 440px) {
+    width: 300px;
+  }
   @media (max-width: 400px) {
     width: 340px;
   }
@@ -163,7 +180,7 @@ const BackgroundDiv = styled.div`
     height: 300px;
   }
   @media (max-width: 400px) {
-    width: 320px;
+    width: 250px;
     height: 300px;
     left: 25px;
   }
@@ -176,9 +193,13 @@ const ImageWrapper = styled.div`
   @media (max-width: 600px) {
     width: 400px;
   }
+  @media (max-width: 440px) {
+    width: 300px;
+    gap: 0px;
+  }
 
   @media (max-width: 400px) {
-    width: 375px;
+    width: 300px;
     justify-content: center;
   }
 `;

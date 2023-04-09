@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import CloseIcon from "../close.png";
-import SIcon from "../searchIcon.png";
 
 export function MobileNavigation() {
   return (
@@ -15,13 +13,34 @@ export function MobileNavigation() {
 
         <SearchBox>
           <SearchInput type="text" placeholder="Search KeyWord ..." />
-          <SearchIcon src={SIcon} />
+          <SearchIcon
+            src={process.env.PUBLIC_URL + "../../../assets/searchIcon.png"}
+          />
         </SearchBox>
       </MobileNavBox>
-      <Close src={CloseIcon} />
     </NavigationWrapper>
   );
 }
+
+const NavigationWrapper = styled.div`
+  display: flex;
+  height: 320px;
+  width: 300px;
+  gap: 100px;
+  position: absolute;
+  background-color: #fff;
+  padding: 20px 20px 20px 20px;
+  top: 80px;
+  left: 20px;
+  border-radius: 8px;
+  background-color: #e9e9e9;
+`;
+
+const MobileNavBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+`;
 
 const SearchBox = styled.div`
   position: absolute;
@@ -38,14 +57,15 @@ const SearchBox = styled.div`
 const SearchInput = styled.input`
   border: 1px solid #f1f1f1;
   border-radius: 8px;
-  height: 30px;
+  height: 40px;
+  margin-bottom: 5px;
   background-color: inherit;
 
   ::placeholder {
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
     color: #2b3252;
-    padding-left: 2px;
+    padding-left: 4px;
   }
   &:focus {
     outline: none;
@@ -53,34 +73,6 @@ const SearchInput = styled.input`
 `;
 const SearchIcon = styled.img``;
 
-const NavigationWrapper = styled.div`
-  display: flex;
-  height: 320px;
-  gap: 100px;
-  position: absolute;
-  background-color: #fff;
-  padding: 20px 20px 20px 20px;
-  top: 40px;
-  left: 50px;
-  border-radius: 8px;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(187, 218, 218, 1) 0%,
-    rgba(0, 212, 255, 1) 100%
-  );
-`;
-const Close = styled.img`
-  width: 16px;
-  height: 16px;
-  align-self: flex-start;
-`;
-
-const MobileNavBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-`;
 const MobileNav = styled(NavLink)`
 font-size: 18px;
   height: 23px;
