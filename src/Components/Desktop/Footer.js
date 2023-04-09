@@ -356,7 +356,7 @@ const SendButton = styled.button`
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   position: absolute;
-  top: 150px;
+  top: 130px;
   left: 400px;
 
   @media (max-width: 1260px) {
