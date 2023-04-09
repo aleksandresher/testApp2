@@ -206,6 +206,7 @@ const SlideDate = styled.p`
   font-weight: 400;
   color: #fff;
   opacity: 0.8;
+  margin-top: 10px;
 `;
 
 const GradientDiv = styled.div`

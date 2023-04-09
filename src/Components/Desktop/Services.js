@@ -72,6 +72,7 @@ const WrapperContainer = styled.div`
   @media (max-width: 440px) {
     flex-direction: column;
     width: 100%;
+    gap: 20px;
   }
   @media (max-width: 400px) {
     flex-direction: column;
@@ -83,6 +84,7 @@ const ServiceSubContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 `;
 
 const ImageWrapper = styled.div`
@@ -100,7 +102,11 @@ const ImageWrapper = styled.div`
     width: 90px;
     height: 90px;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
+    box-shadow: 0px 10px #f0f1f1;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
   }
 `;
 

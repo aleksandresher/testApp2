@@ -358,6 +358,7 @@ const SendButton = styled.button`
   position: absolute;
   top: 130px;
   left: 400px;
+  cursor: pointer;
 
   @media (max-width: 1260px) {
     left: 280px;

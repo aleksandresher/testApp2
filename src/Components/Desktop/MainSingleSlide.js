@@ -32,7 +32,7 @@ export function MainSingleSlide() {
 
 const WrapperContainer = styled.div`
   margin-top: 50px;
-  z-index: -5;
+
   position: relative;
   display: flex;
   padding: 0 auto;
@@ -175,7 +175,7 @@ const ImageButton = styled.button`
   height: 42px;
   margin-top: 20px;
   border-radius: 8px;
-  z-index: 100;
+  cursor: pointer;
 
   @media (max-width: 830px) {
     width: 100px;
