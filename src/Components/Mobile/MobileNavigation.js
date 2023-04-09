@@ -34,6 +34,7 @@ const NavigationWrapper = styled.div`
   left: 20px;
   border-radius: 8px;
   background-color: #e9e9e9;
+  z-index: 600;
 `;
 
 const MobileNavBox = styled.div`
